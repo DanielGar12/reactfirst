@@ -98,3 +98,8 @@
     background: #eaeaea;
     color: #676767;
 }
+
+.error {
+    border: 1px solid red;
+    
+}

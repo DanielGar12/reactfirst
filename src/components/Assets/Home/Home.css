@@ -1,0 +1,29 @@
+.navbar{
+    background-color: transparent;
+   margin: 5px;
+
+}
+.navdiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-weight: 700;
+    font-size: 30px;
+    color: white;
+}
+
+.navElements {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+    gap: 35px;
+    margin-right: 30px;
+}
+
+.navElements li {
+    font-size: 19px;
+    font-weight: 700;
+}
