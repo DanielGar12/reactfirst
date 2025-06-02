@@ -5,7 +5,8 @@
     margin-top: 200px;
     background: #fff;
     padding-bottom: 30px;
-    width: 600px
+    width: 600px;
+    border-radius: 20px; 
 }
 
 .header{
@@ -101,5 +102,5 @@
 
 .error {
     border: 1px solid red;
-    
+
 }
