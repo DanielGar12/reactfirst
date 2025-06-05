@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 import './Home.css'
 import { useNavigate } from 'react-router-dom'
+// import { Swiper } from 'swiper/types'
+import CardSlider from './swipingcard'
 
 const Home = () => {
   const [action, setAction] = useState("Hello")
@@ -29,7 +31,10 @@ const Home = () => {
     </div>
     <div className="title"><h1>Daniel's</h1></div>
     </div>
-
+    <div className="main">
+      <h1>Hi</h1>
+      <CardSlider/>
+    </div>
     </div>
   )
 }
