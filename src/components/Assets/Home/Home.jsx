@@ -3,6 +3,7 @@ import './Home.css'
 import { useNavigate } from 'react-router-dom'
 // import { Swiper } from 'swiper/types'
 import CardSlider from './swipingcard'
+import shoppingcart from './shopping-cart.png'
 
 const Home = () => {
   const [action, setAction] = useState("Hello")
@@ -19,6 +20,8 @@ const Home = () => {
                 <li>Home</li>
                 <li>About</li>
                 <li>Contact</li>
+                <li>Menu</li>
+                <img src={shoppingcart}/>
                 <div className="loginbutton" onClick={()=> {loginButton()}}>Login</div>
             </ul>
         </div>
@@ -32,7 +35,7 @@ const Home = () => {
     <div className="title"><h1>Daniel's</h1></div>
     </div>
     <div className="main">
-      <h1>Hi</h1>
+    <p>asdf</p>
       <CardSlider/>
     </div>
     </div>
