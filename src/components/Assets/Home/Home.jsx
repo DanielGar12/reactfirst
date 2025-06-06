@@ -20,7 +20,7 @@ const Home = () => {
             <div className="logo">Welcome</div>
             <ul className='navElements'>
                 <li>Home</li>
-                <li>About</li>
+                <li onClick={() => {navigation('/about')}}>About</li>
                 <li>Contact</li>
                 <li onClick={() => {navigation('/menu')}}>Menu</li>
                 <img src={shoppingcart}/>

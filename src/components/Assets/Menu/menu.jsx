@@ -14,6 +14,10 @@ const menu = () => {
 
     let [counter, handleCounter] = useState(0)
 
+    const loginButton = () => {
+        navigation('/');
+    }
+
     return (
     <div>
           <div className="navbar">
@@ -21,7 +25,7 @@ const menu = () => {
                     <div className="logo">Menu</div>
                     <ul className='navElements'>
                         <li onClick={()=> {navigation('/home')}}>Home</li>
-                        <li>About</li>
+                        <li onClick={() => {navigation('/about')}}>About</li>
                         <li>Contact</li>
                         <li>Menu</li>
                         <div className="cart">
