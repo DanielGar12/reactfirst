@@ -11,6 +11,8 @@ const Home = () => {
   const loginButton = () => {
     navigation('/')
   }
+
+
   return (
     <div>
     <div className="navbar">
@@ -20,7 +22,7 @@ const Home = () => {
                 <li>Home</li>
                 <li>About</li>
                 <li>Contact</li>
-                <li>Menu</li>
+                <li onClick={() => {navigation('/menu')}}>Menu</li>
                 <img src={shoppingcart}/>
                 <div className="loginbutton" onClick={()=> {loginButton()}}>Login</div>
             </ul>

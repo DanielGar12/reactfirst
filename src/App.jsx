@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import LoginSignup from './components/Assets/LoginSignup/LoginSignup'
 import Home from './components/Assets/Home/Home';
-
+import Menu from './components/Assets/Menu/menu';
 
 
 function App() {
@@ -14,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LoginSignup/>}/>
         <Route path="/home" element={<Home/>}/>
+        <Route path="/menu" element={<Menu/>}/>
       </Routes>
     </Router>    
   
