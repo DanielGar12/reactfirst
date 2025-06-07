@@ -6,6 +6,8 @@ import Burger from '/Users/garci/reactweb/my-react-website/src/components/Assets
 import Fries from '/Users/garci/reactweb/my-react-website/src/components/Assets/Home/fries.jpg'
 import Pizza from '/Users/garci/reactweb/my-react-website/src/components/Assets/Home/pizza.jpg'
 import Tacos from '/Users/garci/reactweb/my-react-website/src/components/Assets/Home/taco.jpg'
+import {Sidebar, Menu, MenuItem, SubMenu} from 'react-pro-sidebar'
+import search from './search.svg'
 
 import { useNavigate } from 'react-router-dom'
 const menu = () => {
@@ -13,10 +15,13 @@ const menu = () => {
     navigation = useNavigate();
 
     let [counter, handleCounter] = useState(0)
-
+    const [showSidebar, setShowSidebar] = useState(false);
+    
     const loginButton = () => {
         navigation('/');
     }
+
+    
 
     return (
     <div>
@@ -30,6 +35,10 @@ const menu = () => {
                         <li>Menu</li>
                         <div className="cart">
                         <img src={shoppingcart}/>
+                            
+                          
+                            
+                      
                         {counter===0?<div></div>:<div className='bubble'>{counter}</div>}
                         </div>
                         <div className="loginbutton" onClick={()=> {loginButton()}}>Login</div>
@@ -37,6 +46,18 @@ const menu = () => {
                 </div>
             </div>
             <div className="menu">
+                <div className="menuTop">
+                    
+                <div className="searchBar">
+                    <div className="searchicon">
+                        <img src={search}/>
+                    </div>
+                    <div className="searchinput">
+                        <input type='text' placeholder='search'/>
+                    </div>
+                </div>
+                </div>
+                <div className="cards">
                 <div className="card">
                     <img src={Burger}/>
                     <h1>Daniel's Burger</h1>
@@ -72,6 +93,8 @@ const menu = () => {
                     <h4>500 CAL</h4>
                     </div>
                     <div className="orderButton second" onClick={()=> {handleCounter(counter = counter +1)}} >Add to Cart</div>
+                </div>
+
                 </div>
             </div>
             
