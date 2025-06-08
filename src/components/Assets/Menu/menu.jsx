@@ -8,6 +8,7 @@ import Pizza from '/Users/garci/reactweb/my-react-website/src/components/Assets/
 import Tacos from '/Users/garci/reactweb/my-react-website/src/components/Assets/Home/taco.jpg'
 import {Sidebar, Menu, MenuItem, SubMenu} from 'react-pro-sidebar'
 import search from './search.svg'
+import Soda from './soda.jpg'
 
 import { useNavigate } from 'react-router-dom'
 const menu = () => {
@@ -21,7 +22,39 @@ const menu = () => {
         navigation('/');
     }
 
-    
+       const menuItems = [
+  {
+    name: "Daniel's Burger",
+    price: 7.99,
+    calories: 750,
+    image: Burger,
+  },
+  {
+    name: "Daniel's Fries",
+    price: 2.99,
+    calories: 400,
+    image: Fries,
+  },
+  {
+    name: "Daniel's Pizza",
+    price: 3.99,
+    calories: 250,
+    image: Pizza,
+  },
+  {
+    name: "Daniel's Tacos",
+    price: 5.99,
+    calories: 500,
+    image: Tacos,
+  },
+  {
+    name: "Daniel's Soda",
+    price: 1.99,
+    calories: 120,
+    image: Soda,
+  }
+];
+
 
     return (
     <div>
@@ -58,46 +91,23 @@ const menu = () => {
                 </div>
                 </div>
                 <div className="cards">
-                <div className="card">
-                    <img src={Burger}/>
-                    <h1>Daniel's Burger</h1>
-                    <div className="price">
-                    <h3>$7.99</h3>
-                    <h4>750 CAL</h4>
+                {menuItems.map((item, index) => (
+                    <div className="card" key={index}>
+                        <img src={item.image} alt={item.name} />
+                        <h1>{item.name}</h1>
+                        <div className="price">
+                        <h3>${item.price.toFixed(2)}</h3>
+                        <h4>{item.calories} CAL</h4>
+                        </div>
+                        <div className="orderButton second" onClick={() => handleCounter(prev => prev + 1)}>
+                        Add to Cart
+                        </div>
                     </div>
-                    <div className="orderButton second" onClick={()=> {handleCounter(counter = counter +1)}} >Add to Cart</div>
-                </div>
-                <div className="card">
-                    <img src={Fries}/>
-                    <h1>Daniel's Fries</h1>
-                    <div className="price"> 
-                    <h3>$2.99</h3>
-                    <h4>400 CAL</h4>
-                    </div>
-                    <div className="orderButton second" onClick={()=> {handleCounter(counter = counter +1)}} >Add to Cart</div>
-                </div>
-                <div className="card">
-                    <img src={Pizza}/>
-                    <h1>Daniel's Pizza</h1>
-                    <div className="price">
-                    <h3>$3.99</h3>
-                    <h4>250 CAL</h4>
-                    </div>
-                    <div className="orderButton second" onClick={()=> {handleCounter(counter = counter +1)}} >Add to Cart</div>                
-                </div>
-                <div className="card">
-                    <img src={Tacos}/>
-                    <h1>Daniel's Tacos</h1>
-                    <div className="price">
-                    <h3>$5.99</h3>
-                    <h4>500 CAL</h4>
-                    </div>
-                    <div className="orderButton second" onClick={()=> {handleCounter(counter = counter +1)}} >Add to Cart</div>
-                </div>
+))}
 
-                </div>
             </div>
             
+    </div>
     </div>
   )
 }

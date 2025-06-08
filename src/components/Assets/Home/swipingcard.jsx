@@ -7,6 +7,7 @@ import Burger from './burger.jpg'
 import Fries from './fries.jpg'
 import Pizza from './pizza.jpg'
 import Taco from './taco.jpg'
+import { useNavigate } from "react-router-dom";
 
 const CardSlider = () => {
   const cards = [
@@ -14,9 +15,11 @@ const CardSlider = () => {
     { image: Fries,title: "Fries", description: "Golden, seasoned, and possibly addictive. Daniel’s Fries are fried to perfection using a technique he developed while watching late-night cooking shows half-asleep. They’re crispy on the outside, fluffy on the inside, and come with a side of sass. You can dip them in ketchup, cheese, or Daniel’s famous “mystery dip” (which changes daily depending on his mood and what’s in the fridge)." },
     { image: Pizza,title: "Pizza", description: "Daniel’s Pizza isn’t just food—it’s a lifestyle. Each slice is a chaotic masterpiece: gooey cheese, zesty sauce, and toppings that range from classic to “why not?” Whether you go for the Pepperoni Apocalypse or the Pineapple Redemption, one thing’s for sure—you’ll be dreaming of the next slice before you’ve finished the crust." },
     { image: Taco,title: "Taco", description: "This isn’t just a taco. It’s Daniel’s Taco—a handheld masterpiece of mayhem and flavor. Crafted with a shell so perfectly crisp it echoes like a drum solo when you bite it, this taco holds a chaotic blend of seasoned beef (or something like it), shredded cheese rainstorms, and lettuce so fresh it still thinks it’s in the garden. Topped with Daniel’s signature “Mildly Dangerous Sauce™,” it’s spicy, mysterious, and probably has a backstory. Warning: May cause spontaneous dancing and unreasonable cravings at 2AM." },
-
+    
     
   ];
+
+  const navigation = useNavigate();
 
   return (
     <Swiper spaceBetween={20} slidesPerView={3}>
@@ -27,7 +30,7 @@ const CardSlider = () => {
             <img src={card.image}/>
             <h3>{card.title}</h3>
             <p>{card.description}</p>
-            <div className="orderButton">Order Now</div>
+            <div className="orderButton" onClick={() => {navigation('/menu')}}>Order Now</div>
             </div>
           </div>
         </SwiperSlide>
