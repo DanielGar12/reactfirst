@@ -23,7 +23,7 @@ const Home = () => {
                 <li onClick={() => {navigation('/about')}}>About</li>
                 <li>Contact</li>
                 <li onClick={() => {navigation('/menu')}}>Menu</li>
-                <img src={shoppingcart}/>
+                <img src={shoppingcart} onClick={()=> {navigation('/cart')}}/>
                 <div className="loginbutton" onClick={()=> {loginButton()}}>Login</div>
             </ul>
         </div>
