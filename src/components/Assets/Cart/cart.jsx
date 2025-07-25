@@ -1,8 +1,109 @@
-import React from 'react'
+import React, {useState} from 'react'
+import './cart.css'
+ import '/Users/garci/reactweb/my-react-website/src/components/Assets/Home/Home'
+ import shoppingcart from '/Users/garci/reactweb/my-react-website/src/components/Assets/Home/shopping-cart.png'
+import Burger from '/Users/garci/reactweb/my-react-website/src/components/Assets/Home/burger.jpg'
+import Fries from '/Users/garci/reactweb/my-react-website/src/components/Assets/Home/fries.jpg'
+import Pizza from '/Users/garci/reactweb/my-react-website/src/components/Assets/Home/pizza.jpg'
+import Tacos from '/Users/garci/reactweb/my-react-website/src/components/Assets/Home/taco.jpg'
+import Trash from '/Users/garci/reactweb/my-react-website/src/components/Assets/Home/trash.png'
+import { useNavigate } from 'react-router-dom'
 
  const Cart = () => {
+  const counter = 0;
+  navigation = useNavigate();
+  const [ifCard, setCard] = useState(false);
+
+  const loginButton = () => {
+    navigation('/')
+  }
+
   return (
-    <div>Cart</div>
+    <div>
+       <div className="navbar">
+                      <div className="navdiv">
+                          <div className="logo">Menu</div>
+                          <ul className='navElements'>
+                              <li onClick={()=> {navigation('/home')}}>Home</li>
+                              <li onClick={() => {navigation('/about')}}>About</li>
+                              <li>Contact</li>
+                              <li onClick={() => {navigation('/menu')}}>Menu</li>
+                              <div className="cart">
+                              <img src={shoppingcart}/>
+                                  
+                                
+                                  
+                            
+                              {counter===0?<div></div>:<div className='bubble'>{counter}</div>}
+                              </div>
+                              <div className="loginbutton" onClick={()=> {loginButton()}}>Login</div>
+                          </ul>
+                      </div>
+                  </div>
+
+                  <div className="jumb">Your Cart</div>
+                  <div className="body">
+
+                     <div className="cartbox">
+                      <div className="titlebox">
+
+                          <div className="cartTitle">Let's Eat!!</div>
+                          <div className="underline"></div>
+                      </div>
+                      <div className="cartItems">
+                        <div className="cartitem">
+                          <img src={Burger}/> 
+                          <h2>Daniel's Burger</h2>
+                          <h3>$10.99</h3>
+                          <div className="trash">
+                            <img src={Trash}/>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="cartBot">
+                        <div className="payCash">Pay At The Counter</div>
+                        <div className="payCard" onClick={() => !ifCard? setCard(true): setCard(false) }>Pay With Card</div>
+                      </div>
+
+                      {ifCard? 
+                      <div className="cardPay">
+                        <div className="cardTitle">
+                        <h2>Enter Payment Details</h2>
+
+                        </div>
+                        <div className="details">
+                          <div className="detail">
+                             <label>Full Name:</label>
+                             <input placeholder='Full Number'/>
+                          </div>
+                          <div className="detail">
+                            <label>Card Number:</label>
+                            <input placeholder='Card Number'/>
+                          </div>
+                          <div className="detail">
+                            <label>Exp Data:</label>
+                            <input placeholder='Exp Date'/>
+                          </div>
+                          <div className="detail">
+                            <label>CVV:</label>
+                            <input placeholder='CVV' type='number'/>
+                          </div>
+                         
+
+
+                        </div>
+                        <div className="payButton">Pay</div>
+                        
+
+                      </div>
+                        : 
+                        <div></div>}
+
+                     </div>
+                  </div>
+
+
+    </div>
   )
 }
 

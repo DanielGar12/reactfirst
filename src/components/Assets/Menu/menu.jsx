@@ -67,7 +67,7 @@ const menu = () => {
                         <li>Contact</li>
                         <li>Menu</li>
                         <div className="cart">
-                        <img src={shoppingcart}/>
+                        <img src={shoppingcart} onClick={() => {navigation('/cart')}}/>
                             
                           
                             
