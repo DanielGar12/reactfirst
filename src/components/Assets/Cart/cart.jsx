@@ -13,6 +13,9 @@ import { useNavigate } from 'react-router-dom'
   const counter = 0;
   navigation = useNavigate();
   const [ifCard, setCard] = useState(false);
+  const [ifSelect, setSelect] = useState("payCard");
+
+
 
   const loginButton = () => {
     navigation('/')
@@ -62,7 +65,7 @@ import { useNavigate } from 'react-router-dom'
                       </div>
                       <div className="cartBot">
                         <div className="payCash">Pay At The Counter</div>
-                        <div className="payCard" onClick={() => !ifCard? setCard(true): setCard(false) }>Pay With Card</div>
+                       <div className={ifSelect} onClick={() => {if (!ifCard){ setCard(true); setSelect("payCard hover")} else{ setCard(false); setSelect("payCard")}} }>Pay With Card</div>
                       </div>
 
                       {ifCard? 

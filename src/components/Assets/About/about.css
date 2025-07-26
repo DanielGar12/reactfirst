@@ -26,11 +26,14 @@
     border-radius: 20px;
     padding: 30px;
     color: #3c009d;
-    
+    flex-direction: column;
+
 }
 .aboutbox h1 {
     font-weight: 700;
     font-size: 70px;
+    align-self: center;
+    margin-top: 0px;
 }
 .titleBub {
     background-color: white;

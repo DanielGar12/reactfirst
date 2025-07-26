@@ -89,6 +89,7 @@
     width: 150px;
     justify-content: center;
     cursor: pointer;
+    font-size: 16px;
 }
 .payCard {
      background-color: #4c00b4;
@@ -100,6 +101,19 @@
     width: 150px;
     justify-content: center;
     cursor: pointer;
+    font-size: 20px;
+}
+
+.payCard:hover {
+    background-color: white;
+    color: #4c00b4;
+    border: 1px #4c00b4 solid;
+}
+
+.hover {
+    background-color: white;
+    color: #4c00b4;
+    border: 1px #4c00b4 solid;
 }
 
 .cardPay {
@@ -133,6 +147,7 @@
     border-radius: 25px;
     font-size: 20px;
     font-weight: 400;
+    cursor: pointer;
 }
 
 
