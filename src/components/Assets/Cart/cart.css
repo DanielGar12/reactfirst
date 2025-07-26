@@ -1,3 +1,7 @@
+.cartbody {
+    height: 1750px;
+}
+
 .jumb {
     display: flex;
     justify-content: center;
@@ -16,7 +20,7 @@
 
 .cartbox {
     background-color: white;
-    height: 1000px;
+    height: 800px;
     width: 90%;
     border-radius: 20px;
     display: flex;
@@ -24,6 +28,10 @@
     gap: 80px;
     
 
+}
+
+.expand {
+    height: 1000px;
 }
 
 .titlebox {
@@ -91,6 +99,13 @@
     cursor: pointer;
     font-size: 16px;
 }
+
+.payCash:hover {
+    background-color: white;
+    color: #4c00b4;
+    border: 1px #4c00b4 solid;
+}
+
 .payCard {
      background-color: #4c00b4;
     color: white;
@@ -103,6 +118,7 @@
     cursor: pointer;
     font-size: 20px;
 }
+
 
 .payCard:hover {
     background-color: white;

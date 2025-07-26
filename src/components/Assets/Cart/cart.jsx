@@ -14,7 +14,9 @@ import { useNavigate } from 'react-router-dom'
   navigation = useNavigate();
   const [ifCard, setCard] = useState(false);
   const [ifSelect, setSelect] = useState("payCard");
-
+  const [ifExpand, setExpand] = useState("cartbox");
+  const [ifCash, setCash] = useState(false);
+  const [ifSelectC, setSelectC] = useState("payCash");
 
 
   const loginButton = () => {
@@ -22,7 +24,7 @@ import { useNavigate } from 'react-router-dom'
   }
 
   return (
-    <div>
+    <div class="cartbody">
        <div className="navbar">
                       <div className="navdiv">
                           <div className="logo">Menu</div>
@@ -47,7 +49,7 @@ import { useNavigate } from 'react-router-dom'
                   <div className="jumb">Your Cart</div>
                   <div className="body">
 
-                     <div className="cartbox">
+                     <div className={ifExpand}>
                       <div className="titlebox">
 
                           <div className="cartTitle">Let's Eat!!</div>
@@ -64,8 +66,8 @@ import { useNavigate } from 'react-router-dom'
                         </div>
                       </div>
                       <div className="cartBot">
-                        <div className="payCash">Pay At The Counter</div>
-                       <div className={ifSelect} onClick={() => {if (!ifCard){ setCard(true); setSelect("payCard hover")} else{ setCard(false); setSelect("payCard")}} }>Pay With Card</div>
+                        <div className={ifSelectC} onClick={()=> {if (!ifCash){ setCash(true); setSelectC("payCash hover"); setExpand("cartbox expand"); setSelect("payCard"); setCard(false)} else{ setCash(false); setSelectC("payCash"); setExpand("cartbox")}}}>Pay At The Counter</div>
+                       <div className={ifSelect} onClick={() => {if (!ifCard){ setCard(true); setSelect("payCard hover"); setExpand("cartbox expand"); setCash(false); setSelectC("payCash")} else{ setCard(false); setSelect("payCard"); setExpand("cartbox")}} }>Pay With Card</div>
                       </div>
 
                       {ifCard? 
@@ -95,14 +97,38 @@ import { useNavigate } from 'react-router-dom'
 
 
                         </div>
-                        <div className="payButton">Pay</div>
+                        <div className="payButton" onClick={() => {navigation('/purchased')}}>Pay</div>
                         
 
                       </div>
-                        : 
+                        :ifCash?
+                        <div className="cardPay">
+                        <div className="cardTitle">
+                        <h2>Enter Payment Details</h2>
+
+                        </div>
+                        <div className="details">
+                          <div className="detail">
+                             <label>Full Name:</label>
+                             <input placeholder='Full Number'/>
+                          </div>
+                          <div className="detail">
+                            <label>Phone Number:</label>
+                            <input placeholder='Phone Number'/>
+                          </div>
+                          
+                         
+
+
+                        </div>
+                        <div className="payButton" onClick={() => navigation('/purchased')}>Pay</div>
+                        
+
+                      </div>: 
                         <div></div>}
 
-                     </div>
+
+                     </div> 
                   </div>
 
 

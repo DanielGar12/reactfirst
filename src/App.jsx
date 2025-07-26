@@ -7,6 +7,7 @@ import Home from './components/Assets/Home/Home';
 import Menu from './components/Assets/Menu/menu';
 import About from './components/Assets/About/about'
 import Cart from './components/Assets/Cart/cart';
+import Purchased from './components/Assets/Purchased/purchased'
 function App() {
   
   return(
@@ -17,6 +18,7 @@ function App() {
         <Route path="/menu" element={<Menu/>}/>
         <Route path ='/about' element={<About/>}/>
         <Route path="/cart" element={<Cart/>}/>
+        <Route path="/purchased" element={<Purchased/>}/>
       </Routes>
     </Router>    
   
