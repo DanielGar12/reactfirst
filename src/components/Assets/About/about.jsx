@@ -33,9 +33,9 @@ import GoogleMapReact from 'google-map-react'
                 <ul className='navElements'>
                     <li onClick={() => {navigation('/home')}}>Home</li>
                     <li>About</li>
-                    <li>Contact</li>
+                    <li onClick={() => {navigation('/contact')}}>Contact</li>
                     <li onClick={() => {navigation('/menu')}}>Menu</li>
-                    <img src={shoppingcart}/>
+                    <img src={shoppingcart} onClick={()=> {navigation('/cart')}}/>
                     <div className="loginbutton" onClick={()=> {loginButton()}}>Login</div>
                 </ul>
             </div>

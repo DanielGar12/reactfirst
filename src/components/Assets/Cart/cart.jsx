@@ -31,7 +31,7 @@ import { useNavigate } from 'react-router-dom'
                           <ul className='navElements'>
                               <li onClick={()=> {navigation('/home')}}>Home</li>
                               <li onClick={() => {navigation('/about')}}>About</li>
-                              <li>Contact</li>
+                              <li onClick={() => {navigation('/contact')}}>Contact</li>
                               <li onClick={() => {navigation('/menu')}}>Menu</li>
                               <div className="cart">
                               <img src={shoppingcart}/>

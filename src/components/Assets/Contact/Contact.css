@@ -1,0 +1,83 @@
+.conbody {
+    height: 1750px
+}
+
+
+.contactjumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    height: 600px;
+    color: white;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.contactbox {
+    background-color: white;
+    height: 800px;
+    width: 95%;
+    border-radius: 20px;
+}
+
+.contactarea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contitle {
+    font-size: 40px;
+    font-weight: 700;
+    color: #3c009d;
+}
+
+.coninput {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 60px;
+    gap: 30px;
+    color: #3c009d;
+    font-size: 30px;
+}
+
+.coninput input {
+    height: 35px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 0.5px solid;
+    width: 400px;
+    font-family: 'Roboto';
+}
+
+.coninput textarea {
+    height: 120px;
+   font-family: 'Roboto';
+   border-radius: 10px;
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.names {
+    display: flex;
+    gap: 30px
+}
+
+
+
+.info {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.submit {
+    align-self: center;
+    margin-top: 30px;
+}

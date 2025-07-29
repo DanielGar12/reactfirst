@@ -64,7 +64,7 @@ const menu = () => {
                     <ul className='navElements'>
                         <li onClick={()=> {navigation('/home')}}>Home</li>
                         <li onClick={() => {navigation('/about')}}>About</li>
-                        <li>Contact</li>
+                        <li onClick={() => {navigation('/contact')}}>Contact</li>
                         <li>Menu</li>
                         <div className="cart">
                         <img src={shoppingcart} onClick={() => {navigation('/cart')}}/>
