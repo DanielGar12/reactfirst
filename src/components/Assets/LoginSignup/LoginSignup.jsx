@@ -9,6 +9,7 @@ const LoginSignup = () => {
   
   const [action,setAction] = useState("Sign Up");
 
+
   const navigate = useNavigate();
 
   const handleSubmit = () => {
@@ -17,6 +18,8 @@ const LoginSignup = () => {
   
     return (
     <div className='container'>
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        
         <div className='header'>
             <div className='text'>{action}</div>
             <div className='underline'></div>
@@ -37,6 +40,7 @@ const LoginSignup = () => {
             </div>
         </div>
         {action==="Sign Up"? <div></div>: <div className="forgot-password">Forgot Password? <span> Click Here! </span></div>}
+                
 
         <div className="submit-container">
             <div className={action==="Login"?"submit gray": "submit"} onClick={()=>{if (action === "Sign Up") handleSubmit();

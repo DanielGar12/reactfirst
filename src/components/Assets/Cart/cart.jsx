@@ -87,11 +87,11 @@ import { useNavigate } from 'react-router-dom'
                           </div>
                           <div className="detail">
                             <label>Exp Data:</label>
-                            <input placeholder='Exp Date'/>
+                            <input placeholder='Exp Date' type='date' />
                           </div>
                           <div className="detail">
                             <label>CVV:</label>
-                            <input placeholder='CVV' type='number'/>
+                            <input placeholder='CVV' type='text' maxLength={3} pattern="\d*"/>
                           </div>
                          
 

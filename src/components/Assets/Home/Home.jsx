@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 // import { Swiper } from 'swiper/types'
 import CardSlider from './swipingcard'
 import shoppingcart from './shopping-cart.png'
+import Valerie from './Valerie.jpg'
 
 const Home = () => {
   const [action, setAction] = useState("Hello")
@@ -39,6 +40,15 @@ const Home = () => {
     <div className="main">
     <p>asdf</p>
       <CardSlider/>
+      <div className="review">
+        <h1>Hear it from customers like you</h1>
+        <div className="quote">
+          <img src={Valerie}/>
+        <p>"This is the best thing ever!"</p>
+        <p>-Valerie</p>
+        </div>
+        
+      </div>
     </div>
     </div>
   )

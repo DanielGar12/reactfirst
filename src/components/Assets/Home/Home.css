@@ -98,7 +98,7 @@
 .main {
     background-color: #fff;
     
-    height: 100vh;
+    height: 1700px;
 }
 
 .cardContent {
@@ -143,6 +143,33 @@
     margin-bottom: 50px;
     
 
+}
+
+.review {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    color:#3c009d;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.quote {
+    display: flex;
+    flex-direction: column;
+    font-size: 40px;
+    font-style: italic;
+    color:#3c009d;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.review img {
+    height: 200px;
+    width: 200px;
+    border-radius: 400px;
+    
 }
 
 @keyframes spin {

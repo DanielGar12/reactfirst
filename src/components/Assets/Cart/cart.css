@@ -166,4 +166,22 @@
     cursor: pointer;
 }
 
+.detail {
+    display: flex;
+    gap: 7px;
+    font-family: 'Roboto';
+}
+
+.detail label {
+    color:#3c009d;
+    font-size: 22px;
+}
+
+.detail input {
+    height: 27px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    width: 250px;
+}
+
 
